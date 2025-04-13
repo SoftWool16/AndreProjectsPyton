@@ -6,11 +6,6 @@ window.title("калькулятор")
 
 e1 = ttk.Entry(window)
 
-print(eval("153+561*4"))
-
-
-def out(a):
-    print("123123123")
 
 string = ''
 
@@ -52,7 +47,14 @@ def command_9():
 def command_equals():
     global string
     #string += "="
+    print(string)
     print(eval(string))
+
+    ttk.Label(window, text=eval(string),
+           foreground="red").grid(ipady=5, column=1, row=0, ipadx=4, columnspan=2)
+    
+    ttk.Label(window, text=(string + "="),
+           foreground="red").grid(ipady=5, column=0, row=0, ipadx=4)
 
 def command_plus():
     global string
@@ -67,6 +69,7 @@ def command_zero():
     global string
     string += "0"
 
+
 ttk.Label(window, text="калькулятор\nдля\nмужиков", background="black",
            foreground="red").grid(ipady=5, column=3, row=0, ipadx=4)
            
@@ -74,36 +77,26 @@ buttons = [
 ttk.Button(window, text="1", command=command_1),
 ttk.Button(window, text="2", command=command_2),
 ttk.Button(window, text="3", command=command_3),
-ttk.Button(window, text="*", command=None),
+ttk.Button(window, text="*", command=command_multiplication),
 
-ttk.Button(window, text="4", command=None),
-ttk.Button(window, text="5", command=None),
-ttk.Button(window, text="6", command=None),
-ttk.Button(window, text="/", command=None),
+ttk.Button(window, text="4", command=command_4),
+ttk.Button(window, text="5", command=command_5),
+ttk.Button(window, text="6", command=command_6),
+ttk.Button(window, text="/", command=command_division),
 
-ttk.Button(window, text="7", command=None),
-ttk.Button(window, text="8", command=None),
-ttk.Button(window, text="9", command=None),
+ttk.Button(window, text="7", command=command_7),
+ttk.Button(window, text="8", command=command_8),
+ttk.Button(window, text="9", command=command_9),
 ttk.Button(window, text="=", command=command_equals),
 
 ttk.Button(window, text="+", command=command_plus),
-ttk.Button(window, text="-", command=None),
-ttk.Button(window, text="%", command=None),
-ttk.Button(window, text="0", command=None)]
+ttk.Button(window, text="-", command=command_minus),
+ttk.Button(window, text="%", command=command_percent),
+ttk.Button(window, text="0", command=command_zero)]
 
 for i in range(0, 4):
     for j in range(0, 4):
         buttons[i*4+j].grid(column=j, row=i+1, ipadx=3, ipady=8)
-
-
-
-
-
-
-
-
-
-
 
 
 window.mainloop()
