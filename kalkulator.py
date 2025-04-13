@@ -12,38 +12,49 @@ string = ''
 def command_1():
     global string
     string += "1"
+    command_equals()
 def command_2():
     global string
     string += "2"
+    command_equals()
 def command_3():
     global string
     string += "3"
+    command_equals()
 def command_multiplication():
     global string
     string += "*"
+    command_equals()
 
 def command_4():
     global string
     string += "4"
+    command_equals()
 def command_5():
     global string
     string += "5"
+    command_equals()
 def command_6():
     global string
     string += "6"
+    command_equals()
 def command_division():
     global string
     string += "/"
+    command_equals()
 
 def command_7():
     global string
     string += "7"
+    command_equals()
 def command_8():
     global string
     string += "8"
+    command_equals()
 def command_9():
     global string
     string += "9"
+    command_equals()
 def command_equals():
     global string
     #string += "="
@@ -59,15 +70,18 @@ def command_equals():
 def command_plus():
     global string
     string += "+"
+    command_equals()
 def command_minus():
     global string
     string += "-"
+    command_equals()
 def command_percent():
     global string
     string += "%"
 def command_zero():
     global string
     string += "0"
+    command_equals()
 
 
 ttk.Label(window, text="калькулятор\nдля\nмужиков", background="black",
