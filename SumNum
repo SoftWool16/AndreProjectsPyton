@@ -1,8 +1,4 @@
 #сдесь я буду писать код для считания суммы цифр в числе
 
-# print(sum(list(map(int, input()))))
+print(sum(list(map(int, input()))))
 
-print("1")
-print("2")
-print("3")
-print("4")
