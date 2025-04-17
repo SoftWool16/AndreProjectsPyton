@@ -3,28 +3,26 @@ from tkinter import ttk
 from tkinter import font
 window = Tk()
 window.title("калькулятор")
-#window.geometry("327x225")
 
 e1 = ttk.Entry(window)
 
-
-
 string = ''
-
-
 
 def command_1():
     global string
     string += "1"
     command_equals()
+
 def command_2():
     global string
     string += "2"
     command_equals()
+
 def command_3():
     global string
     string += "3"
     command_equals()
+
 def command_multiplication():
     global string
     string += "*"
@@ -34,14 +32,17 @@ def command_4():
     global string
     string += "4"
     command_equals()
+
 def command_5():
     global string
     string += "5"
     command_equals()
+
 def command_6():
     global string
     string += "6"
     command_equals()
+
 def command_division():
     global string
     string += "/"
@@ -51,18 +52,15 @@ def command_7():
     global string
     string += "7"
     command_equals()
+
 def command_8():
     global string
     string += "8"
     command_equals()
+
 def command_9():
     global string
     string += "9"
-    command_equals()
-
-def command_del():
-    global string
-    string.rstrip(str(string))
     command_equals()
 
 def command_eq():
@@ -70,25 +68,10 @@ def command_eq():
     string += "."
     command_equals()
 
-
-def command_equals():
+def command_del():
     global string
-    print(string)
-    print(eval(string))
-
-
-    custom_font = font.Font(family="Algerian", size=20)
-    ttk.Label(window, text=eval(string),
-           foreground="black", font=custom_font).grid(ipady=5, column=2, row=0, ipadx=4)
-    
-    ttk.Label(window, text=(string + "="),
-           foreground="black",font=custom_font).grid(ipady=5, column=0, row=0, ipadx=4, columnspan=2)
-    
-
-
-
-ttk.Button(window, text="DelAll", command=command_del).grid(ipady=10, column=3, row=0, ipadx=4)
-
+    string = ''
+    command_equals()
 def command_plus():
     global string
     string += "+"
@@ -105,9 +88,39 @@ def command_zero():
     string += "0"
     command_equals()
 
+def command_l():
+    global string
+    string += "("
+    command_equals()
+
+def command_r():
+    global string
+    string += ")"
+    command_equals()
+
+    
 
 
 
+def command_equals():
+    global string
+    print(string)
+    print(eval(string))
+
+
+    custom_font = font.Font(family="Algerian", size=20)
+    ttk.Label(window, text=eval(string),
+           foreground="black", font=custom_font).grid(ipady=5, column=2, row=0, ipadx=4)
+    
+    ttk.Label(window, text=(string + "="),
+           foreground="black",font=custom_font).grid(ipady=5, column=0, row=0, ipadx=4, columnspan=2)
+
+
+
+
+ttk.Button(window, text="DelAll", command=command_del).grid(ipady=10, column=3, row=0, ipadx=4)
+ttk.Button(window, text="(", command=command_l).grid(ipady=10, column=4, row=0)
+ttk.Button(window, text=")", command=command_r).grid(ipady=9, column=4, row=1)
 
            
 buttons = [

@@ -1,4 +1,12 @@
 #сдесь я буду писать код для считания суммы цифр в числе
 
-print(sum(list(map(int, input()))))
+# print(sum(list(map(int, input()))))
 
+
+
+# print("Цвета полей совпадают" if(int(input())+int(input()))%2==(int(input())+int(input()))%2 else "Цвета полей не совпадают")
+
+print(eval(input()))
+
+
+    
