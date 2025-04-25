@@ -68,9 +68,7 @@ def command_eq():
     string += "."
     command_equals()
 
-def command_del():
-    global string
-    string = ''
+
     command_equals()
 def command_plus():
     global string
@@ -99,7 +97,10 @@ def command_r():
     command_equals()
 
     
-
+def command_del():
+    global string
+    string = ''
+    command_equals()
 
 
 def command_equals():

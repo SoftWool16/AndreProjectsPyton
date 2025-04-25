@@ -6,7 +6,8 @@
 
 # print("Цвета полей совпадают" if(int(input())+int(input()))%2==(int(input())+int(input()))%2 else "Цвета полей не совпадают")
 
-print(eval(input()))
+# print(eval(input()))
 
 
-    
+
+
