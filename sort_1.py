@@ -9,17 +9,29 @@ print(string)
 
 
 def ids(n1, n2):
-    if n1 > n2:
-        s = a.pop(n1)
-        a.insert(n2, s)
-        print(a)
+    string2 = ""
+    s = a.pop(n1)
+    a.insert(n2, s)
+    for b in a:
+        string2 += (" | " + str(b))
+    print(string2)
+
+def lst(num):
+    for n1 in range(num):
+        for n2 in range(num):
+            n2 += 1
+            if n1 > n2:
+                ids(n1, n2)
+            else:
+                print("--------ошибка--------")
 
 
-for number in a:
-    index = a.index(number)
-    for number_2 in a:
-        index_2 = a.index(number_2)
-        ids(index, index_2)
+for s in range(num):
+    if s < num:
+        lst(num)
+    else:
+        print("--------конец--------")
+
 
 
 
